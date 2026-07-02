@@ -1,18 +1,106 @@
-@import "./sass/vendors/bootstrap.scss";
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --accent-color: #888888;
+  --font-family: 'Inter', sans-serif;
+  --spacing: 2rem;
+}
 
-@import "./sass/abstracts/mixins";
-@import "./sass/abstracts/variables";
-@import "./sass/abstracts/helpers";
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    --accent-color: #888888;
+  }
+}
 
-@import "./sass/base/base";
-@import "./sass/base/typography";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-@import "./sass/components/buttons";
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-@import "./sass/layout/footer";
-@import "./sass/layout/sections";
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom-color 0.2s ease;
+}
 
-@import "./sass/sections/about";
-@import "./sass/sections/contact";
-@import "./sass/sections/hero";
-@import "./sass/sections/projects";
+a:hover {
+  border-bottom-color: var(--text-color);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--spacing);
+}
+
+section {
+  padding: calc(var(--spacing) * 3) 0;
+}
+
+h1, h2, h3 {
+  font-weight: 500;
+  margin-bottom: var(--spacing);
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2rem;
+  letter-spacing: -0.01em;
+}
+
+p {
+  color: var(--accent-color);
+  margin-bottom: var(--spacing);
+  font-size: 1.1rem;
+}
+
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing);
+}
+
+.project-item {
+  border: 1px solid var(--accent-color);
+  padding: var(--spacing);
+  border-radius: 4px;
+  transition: border-color 0.2s ease;
+}
+
+.project-item:hover {
+  border-color: var(--text-color);
+}
+
+.project-item h3 {
+  margin-bottom: 0.5rem;
+}
+
+.project-item p {
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: var(--spacing) 0;
+  font-size: 0.9rem;
+  color: var(--accent-color);
+}

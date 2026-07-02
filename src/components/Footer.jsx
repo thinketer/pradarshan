@@ -2,32 +2,9 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="footer navbar-static-bottom">
+    <footer>
       <div className="container">
-        <a rel="noreferrer" href="#top" className="back-to-top">
-          <i className="fa fa-angle-up fa-2x" aria-hidden="true"></i>
-        </a>
-        <div className="social-links">
-          <a rel="noreferrer" href="#!" target="_blank">
-            <i className="fa fa-twitter fa-inverse"></i>
-          </a>
-          <a rel="noreferrer" href="#!" target="_blank">
-            <i className="fa fa-linkedin fa-inverse"></i>
-          </a>
-          <a rel="noreferrer" href="#!" target="_blank">
-            <i className="fa fa-github fa-inverse"></i>
-          </a>
-        </div>
-
-        <hr />
-
-        <p className="footer__text">
-          © {new Date().getFullYear()} - Template developed by{' '}
-          <a rel="noreferrer" href="https://github.com/cobiwave" target="_blank">
-            Jacobo Martínez
-          </a>
-        </p>
-
+        <p>&copy; {new Date().getFullYear()} Ankita Kumari. Built with minimal code.</p>
       </div>
     </footer>
   );
